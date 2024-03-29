@@ -1,0 +1,8 @@
+SECRET='django-insecure-x92d=g-1q=yph76!u(+!_g7&!8oe$lp*ncfp-10fa$0rd-3qe4'
+DEBUG=True
+ALLOWED_HOSTS=*
+DB_NAME=blog_db
+DB_USER=aisha
+DB_PASSWORD=1
+DB_HOST=localhost
+DB_PORT=5432
