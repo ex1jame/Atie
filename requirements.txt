@@ -6,5 +6,6 @@ pillow
 dj-rest-auth
 drf-yasg
 celery
+django-ckeditor
 django-filter
 djangorestframework-simplejwt
