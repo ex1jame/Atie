@@ -4,6 +4,7 @@ from django.urls import path,include
 from django.conf import settings
 from rest_framework.routers import SimpleRouter
 
+from order.views import OrderAPIView
 from category.views import CategoryViewSet
 from product.views import ProductViewSet
 
@@ -15,7 +16,9 @@ router.register('products', ProductViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/accounts/', include('account.urls')),
+    path('api/v1/orders/', OrderAPIView.as_view()),
     path('api/v1/', include(router.urls)),
+
 
 ]
 

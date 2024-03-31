@@ -6,27 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="64b6edf2-7c5b-4a28-8e99-23d3a74943dd" name="Changes" comment="add user and modificated all,&#10;created user structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/managers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/category/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/paginations.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/paginations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/rating/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/rating/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +112,9 @@
       <workItem from="1711796670964" duration="7347000" />
       <workItem from="1711805905691" duration="13486000" />
       <workItem from="1711831127162" duration="1430000" />
-      <workItem from="1711876821727" duration="7796000" />
+      <workItem from="1711876821727" duration="8569000" />
+      <workItem from="1711886129116" duration="3246000" />
+      <workItem from="1711890180458" duration="714000" />
     </task>
     <task id="LOCAL-00001" summary="add user and modificated all,&#10;created user structure">
       <option name="closed" value="true" />
