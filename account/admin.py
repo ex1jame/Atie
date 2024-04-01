@@ -4,3 +4,9 @@ from account.models import CustomUser
 
 
 admin.site.register(CustomUser)
+
+
+
+
+
+

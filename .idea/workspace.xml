@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64b6edf2-7c5b-4a28-8e99-23d3a74943dd" name="Changes" comment="add user and modificated all,&#10;created user structure">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="3f5ea95f-775b-4f47-878e-ec8ae60a1496" name="Changes by aisha" comment="">
+      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +48,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore_missing_gitignore": "true",
     "last_opened_file_path": "/home/temirlan/Desktop/python bootcamp-6/django_projects/ATIE",
     "node.js.detected.package.eslint": "true",
@@ -112,7 +115,7 @@
       <workItem from="1711876821727" duration="8569000" />
       <workItem from="1711886129116" duration="3246000" />
       <workItem from="1711890180458" duration="1360000" />
-      <workItem from="1711946001107" duration="8976000" />
+      <workItem from="1711946001107" duration="12005000" />
     </task>
     <task id="LOCAL-00001" summary="add user and modificated all,&#10;created user structure">
       <option name="closed" value="true" />
