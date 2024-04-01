@@ -35,7 +35,7 @@ class Product(models.Model):
         on_delete=models.CASCADE,
         related_name="products",
     )
-    title = models.CharField(max_length=150, default="")
+    title = models.CharField(max_length=150, default=None)
     description = RichTextField()
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True, related_name="products"
