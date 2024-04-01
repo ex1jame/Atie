@@ -3,8 +3,8 @@ from django.core.mail import send_mail
 HOST = 'localhost:8000'
 
 
-def send_confirmation_email(user,code):
-    link = f'https://{HOST}/api/v1/accounts/activate/{code}/'
+def send_confirmation_email(user, code):
+    link = f'http://{HOST}/api/v1/accounts/activate/{code}/'
     send_mail(
         'Hello lets you activate your account',
 

@@ -1,6 +1,10 @@
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import permissions,response
 from rest_framework.decorators import action
+from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 from rating.serializers import RatingSerializer
 from .models import Product
@@ -8,11 +12,21 @@ from . import serializers
 from .permissions import IsOwner,IsOwnerOrAdmin
 
 
+class StandartResultsSetPagination(PageNumberPagination):
+    page_size = 2
+    page_query_param = 'page'
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
 class ProductViewSet(ModelViewSet):
     """
     API-точка, позволяющая просматривать или редактировать продукты.
     """
     queryset = Product.objects.all()
+    filter_backends = (DjangoFilterBackend,SearchFilter)
+    search_fields = ('title', 'description')
+    filterset_fields = ('owner','category')
+    pagination_class = StandartResultsSetPagination
 
     def perform_create(self, serializer):
         """
@@ -33,7 +47,7 @@ class ProductViewSet(ModelViewSet):
         Вернуть соответствующие разрешения в зависимости от запрашиваемого действия.
         """
         if self.action == 'list':
-            return [permissions.IsAuthenticated()]
+            return [permissions.AllowAny()]
         elif self.action == 'retrieve':
             return [permissions.IsAuthenticated()]
         elif self.action in ['update', 'partial_update', 'destroy']:

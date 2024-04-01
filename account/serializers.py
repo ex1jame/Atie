@@ -72,8 +72,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         Возвращает:
         - Валидированные данные.
         """
-        password = attrs.get("password")
-        password2 = attrs.get("password2")
+        password = attrs['password']
+        password2 = attrs.pop('password2')
 
         if password != password2:
             raise serializers.ValidationError(

@@ -44,4 +44,8 @@ class CustomUser(AbstractUser):
         Поле активации_кода.
         """
         code = str(uuid4())
-        self.activation_code = code
+        return code
+
+    def save(self, *args, **kwargs):
+        self.activation_code = self.create_activation_code()
+        super().save(*args, **kwargs)
