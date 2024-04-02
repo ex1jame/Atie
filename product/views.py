@@ -1,12 +1,14 @@
 from rest_framework.pagination import PageNumberPagination
+from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import permissions,response
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
-
+from review.serializers import ReviewSerializer
 from rating.serializers import RatingSerializer
+from review.models import Review
 from .models import Product
 from . import serializers
 from .permissions import IsOwner,IsOwnerOrAdmin
@@ -48,10 +50,11 @@ class ProductViewSet(ModelViewSet):
         """
         if self.action == 'list':
             return [permissions.AllowAny()]
-        elif self.action == 'retrieve':
+        elif self.action in ['retrieve', 'review']:
             return [permissions.IsAuthenticated()]
         elif self.action in ['update', 'partial_update', 'destroy']:
             return [IsOwnerOrAdmin()]
+
         else:
             return [permissions.IsAdminUser()]
 
@@ -93,3 +96,42 @@ class ProductViewSet(ModelViewSet):
             rating = product.ratings.get(owner=user)
             rating.delete()
             return response.Response('Удалено!', status=204)
+
+
+    # http://localhost:8000/api/v1/products/1/reviews/
+    @action(['POST','GET','DELETE'], detail=True)
+    def review(self, request, pk):
+        # post = Post.objects.get(pk=pk)
+        # review = Review.objects.all()
+        # instance = self.get_object()
+        # serializer = serializers.ReviewSerializer(data=request.data)
+        product = self.get_object()
+        if request.method == 'POST':
+            serializer = ReviewSerializer(data=request.data)
+            if serializer.is_valid():
+
+                # Создаем новый объект Review, используя данные запроса
+                review = Review.objects.create(
+                    title=serializer.validated_data['title'],
+                    description=serializer.validated_data['description'],
+
+                    product=product,  # Привязываем отзыв к конкретному продукту
+                    owner=request.user,  # Привязываем отзыв к текущему пользователю
+                )
+                return Response(ReviewSerializer(review).data, status=201)
+            return Response(serializer.errors, status=400)
+        elif request.method == 'GET':
+            review = Review.objects.filter(product=product)
+            serializer = ReviewSerializer(instance=review, many=True)
+            return Response(serializer.data, status=200)
+
+
+        elif request.method == 'DELETE':
+            user = request.user
+            review = Review.objects.filter(product=product, owner=user)
+            if not review:
+                return Response('Вы не оценили этот продукт', status=400)
+            review.delete()
+            return Response('Удалено!', status=204)
+
+
