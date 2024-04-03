@@ -5,7 +5,7 @@ from rest_framework.viewsets import GenericViewSet
 from rest_framework.mixins import ListModelMixin
 from rest_framework.response import Response
 
-
+from core.tasks import send_confirmation_email_task
 from . import serializers
 from .send_mail import send_confirmation_email
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -42,7 +42,7 @@ class UserViewSet(ListModelMixin, GenericViewSet):
         user = serializer.save()
         if user:
             try:
-                send_confirmation_email(user.email, user.activation_code)
+                send_confirmation_email_task.delay(user.email, user.activation_code)
             except Exception as e:
                 print('!!!!')
                 return Response({'msg': 'Зарегистрирован, но возникли проблемы с электронной почтой!',

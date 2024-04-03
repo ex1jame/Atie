@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'ckeditor',
     'drf_yasg',
-
+    'celery',
     # my app
     'account',
     'category',
@@ -201,3 +201,16 @@ SWAGGER_SETTINGS = {
       }
    }
 }
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = '6379'
+
+CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+#   redis://localhost:6379/0
+CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout':3600}
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+broker_connection_retry_on_startup = True
+
