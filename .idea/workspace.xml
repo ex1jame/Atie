@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="64b6edf2-7c5b-4a28-8e99-23d3a74943dd" name="Changes" comment="add reviews,add order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <list id="3f5ea95f-775b-4f47-878e-ec8ae60a1496" name="Changes by aisha" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -117,7 +118,7 @@
       <workItem from="1711946001107" duration="12005000" />
       <workItem from="1712027755638" duration="16836000" />
       <workItem from="1712089555102" duration="4837000" />
-      <workItem from="1712130145941" duration="4504000" />
+      <workItem from="1712130145941" duration="9485000" />
     </task>
     <task id="LOCAL-00001" summary="add user and modificated all,&#10;created user structure">
       <option name="closed" value="true" />

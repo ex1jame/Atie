@@ -1,0 +1,268 @@
+@import "../style/font.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Basic conf*/
+input {outline: 0 !important;}
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Unique setting*/
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+
+.section__title {
+    position: relative;
+
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 66px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.text-right {
+    text-align: right;
+}
+
+.section__img {
+
+    position: absolute;
+    left: 430px;
+    bottom: -70px;
+
+}
+.testdrive__line_media{
+    display: none;
+}
+.orange_btn {
+    background: #DC4400;
+    border-radius: 72px;
+    width: 228px;
+    height: 47px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.orange_text {
+    color: #DC4400;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.align-items {
+    align-items: center;
+}
+
+/*Hero*/
+.testdrive{
+    width: 100%;
+}
+.testdrive__hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/testback.png"), no-repeat;
+}
+
+.testdrive__hero_main {
+    padding-top: 250px;
+}
+
+.testdrive__hero_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 75%;
+
+}
+
+.testdrive__hero_title {
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 49px;
+    color: #FFFFFF;
+    margin-bottom: 61px;
+}
+
+.testdrive__hero_subtitle {
+    width: 715px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 105px;
+
+}
+
+.testdrive__hero_grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.testdrive__hero_block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 71px;
+
+}
+
+.testdrive__hero_grid img {
+    max-width: 3%;
+
+    margin-right: 56px;
+}
+
+.testdrive__hero_text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    width: 500px;
+}
+
+/*Form*/
+.testdrive__form {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/anketa_back.png") no-repeat center/cover;
+    padding-top: 182px;
+}
+.testdrive__form .section__title{
+    margin-bottom: 69px ;
+}
+.testdrive__form .section__img{
+    left: 230px;
+}
+.testdrive__form_subtitle {
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 90px;
+}
+
+.testdrive__form .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testdrive__form_block {
+
+    width: 689px;
+    height: 390px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 40px;
+}
+.testdrive__form_form{
+    padding: 0 90px 10px 90px;
+}
+
+.testdrive__form_input{
+    width: 510px;
+    height: 65px;
+    position: relative;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+.testdrive__form_input::placeholder{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}
+
+.testdrive__form_desc{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-top: 23px;
+}
+.testdrive__form_span{
+    position: absolute;
+    width: 510px;
+    border: 1px solid #aba9a9;
+
+}
+.testdrive__form .orange_btn{
+height: 64px;
+    width: 689px;
+}

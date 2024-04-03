@@ -1,0 +1,268 @@
+@import "../style/font.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Basic conf*/
+input {outline: 0 !important;}
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Unique setting*/
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+
+.section__title {
+    position: relative;
+
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 66px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.text-right {
+    text-align: right;
+}
+
+.section__img {
+
+    position: absolute;
+    left: 430px;
+    bottom: -70px;
+
+}
+
+.orange_btn {
+    background: #DC4400;
+    border-radius: 72px;
+    width: 228px;
+    height: 47px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.orange_text {
+    color: #DC4400;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.align-items {
+    align-items: center;
+}
+
+/*Hero*/
+.tracking__hero {
+    width: 100%;
+    min-height: 100vh;
+    background: url("../images/cross_bg.png") no-repeat center/cover;
+    padding: 195px 0 20px 0;
+}
+
+.tracking__hero .container {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tracking__hero .section__img {
+    left: 280px;
+}
+
+.tracking__hero .section__title {
+    font-size: 24px;
+    line-height: 25px;
+
+}
+
+.tracking__hero_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-top: 93px;
+    margin-bottom: 28px;
+    position: relative;
+
+}
+
+.tracking__hero_input {
+    position: relative;
+    border: none;
+    width: 1170px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+
+    padding: 21px 44px;
+}
+
+.tracking__hero_form {
+    display: flex;
+
+}
+
+.tracking__hero_form .orange_btn {
+    position: absolute;
+    right: 386px;
+    Width: 212px;
+    Height: 64px;
+    transition: all 0.6s;
+}
+
+.orange_btn {
+    transition: all 0.6s;
+}
+
+.orange_btn:hover {
+    background: #FFFFFF;
+    color: #DC4400;
+    font-weight: 700;
+}
+
+.tracking__hero_desc {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 34px 0;
+}
+.tracking__hero_block {
+    width: 100%;
+    height: 100%;
+    padding: 70px 44px 56px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.22) 100%);
+    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.22);
+    border-radius: 40px;
+
+}
+
+.tracking__hero_main {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.tracking__hero_text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 48px;
+    color: #FFFFFF;
+}
+
+.tracking__hero_line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 51px ;
+    position: relative;
+    top: 150px;
+    left: -140px;
+    width: 299px;
+    height: 0;
+    border: 2px solid #DC4400;
+    background: #DC4400;
+    transform: rotate(90deg);
+}
+
+.tracking__hero_eclipse {
+    position: relative;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    right: 4px;
+    background: #000000;
+    border-radius: 50%;
+    border: 2px solid #DC4400;
+    transform: rotate(90deg);
+    transition: all 0.1s;
+
+
+}
+.tracking__hero_eclipse:hover{
+    background: #DC4400;
+}
+.eclipse_active{
+    background: #DC4400;
+}
+
+.tracking__hero_track {
+    position: relative;
+    width: 15px;
+    height: 282px;
+    margin-right: 20px;
+
+}
