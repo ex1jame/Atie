@@ -16,7 +16,7 @@ SECRET_KEY = de_config('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = de_config('DEBUG',cast=bool)
 
-ALLOWED_HOSTS = ['192.168.0.108','localhost','127.0.0.1','10.10.10.17:8000','*']
+ALLOWED_HOSTS = ['192.168.0.108','localhost','127.0.0.1','10.10.10.17:8000','*','34.69.229.249','10.128.0.2']
 
 
 # Application definition
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # inst_apps
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'ckeditor',
     'drf_yasg',
-
+    'celery',
     # my app
     'account',
     'category',
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -202,3 +204,19 @@ SWAGGER_SETTINGS = {
       }
    }
 }
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = '6379'
+
+CELERY_BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
+#   redis://localhost:6379/0
+CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout':3600}
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+broker_connection_retry_on_startup = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]

@@ -1,0 +1,290 @@
+@import "../style/font.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Basic conf*/
+input {outline: 0 !important;}
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Unique setting*/
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+
+.section__title {
+    position: relative;
+
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 66px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.text-right {
+    text-align: right;
+}
+
+.section__img {
+
+    position: absolute;
+    left: 430px;
+    bottom: -70px;
+
+}
+
+.orange_btn {
+    background: #DC4400;
+    border-radius: 72px;
+    width: 228px;
+    height: 47px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.orange_text {
+    color: #DC4400;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.align-items {
+    align-items: center;
+}
+/*Hero*/
+.aboutpage__hero{
+    height: 100vh;
+    width: 100%;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.51)), url("../images/about_bg2.png" ) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.aboutpage__hero{
+    float: bottom;
+    align-items: flex-end;
+    padding: 100px;
+}
+.aboutpage__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.aboutpage__col{
+    width: 416px;
+    margin-right: 109px;
+}
+.aboutpage__title{
+    width: 1000px;
+    font-family: 'Micra',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32.4461px;
+    line-height: 136.5%;
+    color: #FFFFFF;
+    margin-bottom: 80px;
+}
+.aboutpage__desc{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 148%;
+
+    color: #FFFFFF;
+}
+.aboutpage__about{
+    height: 100vh;
+    width: 100%;
+align-items: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.51)), url("../images/aboutpage_bg1.png" ) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+}
+.aboutpage__third{
+    height: 100vh;
+    width: 100%;
+    align-items: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.51)), url("../images/aboutpage_bg2.png" ) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+}
+.aboutpage__third .aboutpage__title{
+    margin-bottom: 50px;
+}
+.aboutpage__fourth{
+    height: 100vh;
+    width: 100%;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.51)), url("../images/aboutpage_bg3.png" ) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/*Video*/
+.aboutpage__video{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.51)), url("../images/anketa_back.png" ) ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutpage__main{
+    width: 1104.72px;
+    height: 644.2px;
+    border: none    ;
+}
+.aboutpage__video-title{
+    font-family: 'Proxima Nova',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 57px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+/*footer*/
+.aboutpage__footer{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/anketa_back.png"), no-repeat center/cover;
+
+}
+.aboutpage__footer img{
+    position: relative;
+    left: 0px;
+}
+
+.aboutpage__footer .section__title{
+    font-family: 'Micra',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+.aboutpage__footer .section__subtitle{
+    width: 620px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+/*Form*/
+
+.aboutpage__form_block {
+    width: 689px;
+    height: 292px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 40px;
+    margin: 0 auto;
+}
+
+.aboutpage__form_form{
+    padding: 15px 90px 45px 90px;
+}
+.aboutpage__form_input{
+    width: 510px;
+    position: relative;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+
+}
+.aboutpage__form_form label{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+
+}
+.aboutpage__form_span{
+    position: absolute;
+    width: 510px;
+    border: 1px solid #aba9a9;
+
+}
+.aboutpage__form_desc{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+.aboutpage__footer .orange_btn{
+    height: 64px;
+    width: 689px;
+}

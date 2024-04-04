@@ -1,0 +1,349 @@
+@import "font.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+input {
+    outline: 0 !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*Basic conf*/
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*Unique setting*/
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+
+.section__title {
+    position: relative;
+
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 66px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.text-right {
+    text-align: right;
+}
+
+.section__img {
+
+    position: absolute;
+    left: 430px;
+    bottom: -70px;
+
+}
+
+.orange_btn {
+    background: #DC4400;
+    border-radius: 72px;
+    width: 228px;
+    height: 47px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.align-items {
+    align-items: center;
+}
+
+/*Hero*/
+.cars__hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/cars_hero.png") no-repeat center/cover;
+    padding-top: 230px;
+}
+
+.cars__text {
+    width: 100%;
+
+    margin-bottom: 380px;
+}
+
+.cars__title {
+    font-family: 'Micra', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 66px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.cars__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.845px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cars__hero_grid {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cars__hero_col {
+    padding: 20px 30px 0 30px;
+}
+
+.cars__hero_title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cars__hero_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*About*/
+.cars__about {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 0%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/cars_about.png") no-repeat center/cover;
+
+    padding-top: 230px;
+}
+
+.cars__about .cars__subtitle {
+    width: 63%;
+}
+
+.cars__about_title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*Info*/
+.cars__info {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 0%), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/cars_info.png") no-repeat center/cover;
+
+    padding-top: 357px;
+}
+
+.cars__info_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    /* identical to box height, or 34px */
+
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.cars__info_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.cars__info_back {
+    -webkit-box-shadow: 0px -100px 100px 8px rgba(0, 0, 0, 0.64) inset;
+    -moz-box-shadow: 0px -100px 100px 8px rgba(0, 0, 0, 0.64) inset;
+    box-shadow: 0px -100px 100px 8px rgba(0, 0, 0, 0.64) inset;
+    height: 100%;
+}
+
+/*Test*/
+.cars__test {
+    width: 100%;
+    height: 100%;
+}
+
+.cars__test_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cars__test_grid .d-flex {
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.cars__test_shadow {
+    -webkit-box-shadow: 1px 12px 100px 63px rgba(0, 0, 0, 1) inset;
+    -moz-box-shadow: 1px 12px 100px 63px rgba(0, 0, 0, 1) inset;
+    box-shadow: 1px 12px 100px 63px rgba(0, 0, 0, 1) inset;
+    height: 100%;
+}
+
+.cars__test_first {
+
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/test_1.png") no-repeat center/cover;
+    padding-bottom: 90px;
+
+}
+
+.cars__test_second {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/test_2.png") no-repeat center/cover;
+    padding-bottom: 90px;
+}
+
+.cars__test_third {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/test_3.png") no-repeat center/cover;
+    padding-bottom: 90px;
+}
+
+.cars__test_fourth {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/test_4.png") no-repeat center/cover;
+    padding-bottom: 90px;
+}
+
+.cars__test_title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 140%;
+    /* or 56px */
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #FFFFFF;
+}
+
+.cars__test_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cars__slide_page {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(270deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url("../images/cars_slider.png") no-repeat center/cover;
+    padding: 0px 150px;
+}
+
+.carousel .slide .cars__slide_arrow {
+    width: 2%;
+    vertical-align: top;
+    border: 0;
+}
+
+.cars__slide .carousel .control-prev.control-arrow {
+    left: 150px !important;
+    cursor: pointer;
+    top: 0;
+}
+
+.cars__slide .carousel.carousel-slider .control-arrow {
+    top: -263px !important;
+    cursor: pointer;
+}
+
+.cars__slide .carousel .control-next.control-arrow {
+    right: 150px !important;
+    cursor: pointer;
+}
+
+.testdrive__form .section__img {
+    left: 98px;
+}

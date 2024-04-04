@@ -9,3 +9,4 @@ celery
 django-ckeditor
 django-filter
 djangorestframework-simplejwt
+django-cors-headers
