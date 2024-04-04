@@ -1,13 +1,13 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-<<<<<<< HEAD
+
 # from django.db.models.signals import post_save
 # from django.dispatch import receiver
-=======
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from core.tasks import send_notification_task
->>>>>>> d7cbc68e91a9bedef1d491f5d91e435390202569
+
 
 from product.models import Product
 
@@ -47,8 +47,6 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.id} - {self.user}'
-<<<<<<< HEAD
-=======
 
 @receiver(post_save, sender = Order)
 def order_post_save(sender, instance: Order, *args, **kwargs):
@@ -58,4 +56,4 @@ def order_post_save(sender, instance: Order, *args, **kwargs):
         instance.total_sum,
 
     )
->>>>>>> d7cbc68e91a9bedef1d491f5d91e435390202569
+
