@@ -42,6 +42,7 @@ urlpatterns = [
     path('api/v1/', include(router.urls)),
 
 
+
 ]
 
 if settings.DEBUG:

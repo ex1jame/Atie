@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 
+from favorite.models import Favorite
 from review.serializers import ReviewSerializer
 from rating.serializers import RatingSerializer
 from review.models import Review
@@ -133,5 +134,22 @@ class ProductViewSet(ModelViewSet):
                 return Response('Вы не оценили этот продукт', status=400)
             review.delete()
             return Response('Удалено!', status=204)
+
+    @action(['POST', 'DELETE'], detail=True)
+    def favorites(self, request, pk):
+        product = self.get_object()
+        user = request.user
+        favorite = user.favorites.filter(product=product)
+
+        if request.method == 'POST':
+            if favorite.exists():
+                return Response({'Уже в избранных!'}, status=400)
+            Favorite.objects.create(owner=user, product=product)
+            return Response({'Добавлено в избранное!'}, status=201)
+
+        if favorite.exists():
+            favorite.delete()
+            return Response({'Удалено из избранного!'}, status=204)
+        return Response({'Такого проекта не существует!'}, status=404)
 
 
