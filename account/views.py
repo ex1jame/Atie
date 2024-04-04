@@ -11,6 +11,10 @@ from .send_mail import send_confirmation_email
 from rest_framework.permissions import AllowAny, IsAuthenticated
 
 
+
+#hello world
+#ne helloworld
+
 User = get_user_model()
 
 class UserViewSet(ListModelMixin, GenericViewSet):
@@ -60,3 +64,11 @@ class UserViewSet(ListModelMixin, GenericViewSet):
         user.activation_code = ''
         user.save()
         return Response({'message': 'Аккаунт активирован.'}, status=200)
+
+    @action(['GET'], detail=False)
+    def favorite(self, request):
+        user = request.user
+        fav_prod = user.favorites.all()
+        serializer = FavoriteSerializer(fav_prod, many=True)
+        return Response(serializer.data, status=200)
+

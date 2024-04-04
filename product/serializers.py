@@ -2,6 +2,8 @@ from django.db.models import Avg
 from rest_framework import serializers
 
 from category.models import Category
+from review.models import Review
+from review.serializers import ReviewSerializer
 from .models import Product
 
 
@@ -57,7 +59,6 @@ class ProductSerializer(serializers.ModelSerializer):
         image (str): URL изображения продукта.
         rating_avg (float): Средний рейтинг продукта, рассчитанный на основе поля рейтингов.
     """
-
     owner_email = serializers.ReadOnlyField(source='owner.email')
     owner = serializers.ReadOnlyField(source='owner.id')
     category = serializers.PrimaryKeyRelatedField(required=True, queryset=Category.objects.all())
@@ -65,6 +66,7 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
+
 
     def to_representation(self, instance):
         """
@@ -82,4 +84,12 @@ class ProductSerializer(serializers.ModelSerializer):
 
         except TypeError:
             repr['rating_avg'] = None
+
+        reviews = Review.objects.filter(product=instance)
+        reviews_serializer = ReviewSerializer(instance=reviews, many=True)
+        repr['reviews'] = reviews_serializer.data
         return repr
+
+
+
+

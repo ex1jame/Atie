@@ -18,7 +18,7 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(_('last Name'), max_length=150)
     username = models.CharField(max_length=100, blank=True)
     activation_code = models.CharField(max_length=150, blank=True)
-    avatar = models.ImageField(upload_to='avatars', blank=True, default='avatars/default_avatar.jpg.png')
+    avatar = models.ImageField(upload_to='avatars', blank=True, default='avatars/default_avatar.png')
     is_active = models.BooleanField(
         _("active"),
         default=False,

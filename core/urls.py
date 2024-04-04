@@ -11,10 +11,12 @@ from drf_yasg.views import get_schema_view
 from order.views import OrderAPIView
 from category.views import CategoryViewSet
 from product.views import ProductViewSet
+from review.views import ReviewViewSet
 
 router = SimpleRouter()
 router.register('categories', CategoryViewSet)
 router.register('products', ProductViewSet)
+router.register('reviews', ReviewViewSet)
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -38,6 +40,7 @@ urlpatterns = [
     path('api/v1/accounts/', include('account.urls')),
     path('api/v1/orders/', OrderAPIView.as_view()),
     path('api/v1/', include(router.urls)),
+
 
 
 ]
