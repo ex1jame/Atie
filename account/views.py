@@ -42,7 +42,7 @@ class UserViewSet(ListModelMixin, GenericViewSet):
         user = serializer.save()
         if user:
             try:
-                send_confirmation_email_task.delay(user.email, user.activation_code)
+                send_confirmation_email(user.email, user.activation_code)
             except Exception as e:
                 print('!!!!')
                 return Response({'msg': 'Зарегистрирован, но возникли проблемы с электронной почтой!',
