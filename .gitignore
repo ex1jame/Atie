@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+sites-enabled
+static/
+udo journalctl -u gunicorn
+udo systemctl status gunicorn
 # C extensions
 *.so
 

@@ -16,7 +16,7 @@ SECRET_KEY = de_config('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = de_config('DEBUG',cast=bool)
 
-ALLOWED_HOSTS = ['192.168.0.108','localhost','127.0.0.1','10.10.10.17:8000','*']
+ALLOWED_HOSTS = ['192.168.0.108','localhost','127.0.0.1','10.10.10.17:8000','*','34.69.229.249','10.128.0.2']
 
 
 # Application definition
