@@ -4,6 +4,9 @@ import Login from './components/Login';
 import RegistrationForm from './components/RegistrationForm';
 import Header from "./components/Header";
 import './style/App.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+import MainPage from "./components/MainPage";
 
 const App = () => {
 
@@ -23,14 +26,12 @@ const App = () => {
 
     return (
         <Router>
-            <Header isLight={isLight} isDisplay={isDisplay} isBlack={isBlack}/>
+           <Header isLight={isLight} isDisplay={isDisplay} isBlack={isBlack}/>
             <Routes>
-                {/*<Route path="/" element={<Home />} />*/}
-                <Route path="/login" element={<Login onLogin={handleLogin}/>}/>
-                <Route path="/register" element={<RegistrationForm onRegistration={handleRegistration}/>}/>
-
+                <Route path="/" element={<MainPage setIsLight={setIsLight} />}/>
+                <Route path="/login" element={<Login onLogin={handleLogin} setDisplay={setDisplay}/>}/>
+                <Route path="/register" element={<RegistrationForm onRegistration={handleRegistration} setDisplay={setDisplay}/>}/>
             </Routes>
-
         </Router>
     );
 };

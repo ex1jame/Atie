@@ -4,7 +4,10 @@
 
     }
 
-
+    .logo__img{
+        width: 100px!important;
+        height: 100px!important;
+    }
     .cars__text {
         width: 100%;
         margin-bottom: 320px !important;
@@ -1002,11 +1005,12 @@
     }
 
     .header__logo {
-
+        width: 40% !important;
+        height: 40% !important;
         position: absolute;
         left: 20px;
     }
-
+    .logo
     .header__main.d-flex {
         display: block;
     }
