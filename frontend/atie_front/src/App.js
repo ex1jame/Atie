@@ -5,7 +5,7 @@ import RegistrationForm from './components/RegistrationForm';
 import Header from "./components/Header";
 import './style/App.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
+import PaymentCard from "./components/ProductDisplay";
 import MainPage from "./components/MainPage";
 
 const App = () => {

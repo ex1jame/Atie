@@ -23,7 +23,7 @@ class Product(models.Model):
     Методы:
         __str__(self): Возвращает название продукта.
     """
-
+    # product_id = models.AutoField(primary_key=True)
     STATUS_CHOICES = (
         ("in_stock", "В наличии"),
         ("out_of_stock", "Нет в наличии"),

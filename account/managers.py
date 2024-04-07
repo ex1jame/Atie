@@ -16,6 +16,7 @@ class UserManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, **kwargs)
         user.set_password(password)
+        user.create_activation_code() # create a new activation code
         user.save(using=self._db)
         return user
 

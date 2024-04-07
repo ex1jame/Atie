@@ -1,6 +1,9 @@
 import  React, {useEffect, useState} from "react"
 import '../style/media.css'
 import '../style/App.css'
+import ProductDisplay from "./ProductDisplay";
+import ChatComponent from "./ChatComponent";
+
 
 
 const MainPage = ({setIsLight}) => {
@@ -18,6 +21,13 @@ const MainPage = ({setIsLight}) => {
                     <h2 className="hero__subtitle ">MarketPlace</h2>
                 </div>
                 <button className="orange_btn">Купить раба</button>
+
+            </section>
+            <div>
+                <ProductDisplay/>
+            </div>
+            <section className="hero d-flex justify-center flex-column align-items">
+                <ChatComponent/>
             </section>
 
         </div>

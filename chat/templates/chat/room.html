@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb); /* Градиентный фон */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        #chat-log {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #chat-message-input {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #chat-message-submit {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <div class="row">
+            <div class="col-12">
+                <div id="chat-log" class="animate__animated animate__fadeIn"></div>
+            </div>
+            <div class="col-10">
+                <input id="chat-message-input" class="form-control animate__animated animate__fadeIn" type="text" placeholder="Type your message">
+            </div>
+            <div class="col-2">
+                <button id="chat-message-submit" class="btn btn-primary animate__animated animate__fadeIn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {{ room_name|json_script:"room-name" }}
+    <script>
+        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        const chatLog = document.getElementById('chat-log');
+        const messageInput = document.getElementById('chat-message-input');
+
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + roomName
+            + '/'
+        );
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            chatLog.innerHTML += `<div>${data.message}</div>`;
+            chatLog.scrollTop = chatLog.scrollHeight;
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        messageInput.focus();
+        messageInput.addEventListener('keyup', function(e) {
+            if (e.keyCode === 13) {
+                document.getElementById('chat-message-submit').click();
+            }
+        });
+
+        document.getElementById('chat-message-submit').addEventListener('click', function(e) {
+            const message = messageInput.value;
+            chatSocket.send(JSON.stringify({
+                'message': message
+            }));
+            messageInput.value = '';
+        });
+    </script>
+</body>
+</html>
