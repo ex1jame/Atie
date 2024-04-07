@@ -5,10 +5,11 @@ from django.shortcuts import redirect
 import stripe
 
 from product.models import Product
+from decouple import config
 
 
 class StripeCheckoutSessionViewSet(viewsets.ViewSet):
-    stripe.api_key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
+    stripe.api_key = config('stripe.api_key')
     YOUR_DOMAIN = 'http://localhost:8000'
 
 

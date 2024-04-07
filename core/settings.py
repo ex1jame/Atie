@@ -14,7 +14,7 @@ SECRET_KEY = de_config('SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = de_config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['192.168.0.108', 'localhost', '127.0.0.1', '10.10.10.17:8000', '*', '34.69.229.249', '10.128.0.2']
+ALLOWED_HOSTS = de_config('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
@@ -176,8 +176,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Google configuration
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '32346113426-i6r8iri45ta42gdd9k96tuouppvtaet1.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = de_config('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = de_config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
 
 # Define SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE to get extra permissions from Google.
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
