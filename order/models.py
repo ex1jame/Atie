@@ -1,8 +1,13 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+
+# from django.db.models.signals import post_save
+# from django.dispatch import receiver
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from core.tasks import send_notification_task
+
 
 from product.models import Product
 
@@ -14,8 +19,9 @@ STATUS_CHOICES = (
     ('closed', 'Закрыт')
 )
 
+
 class OrderItem(models.Model):
-    order = models.ForeignKey('Order',related_name='items',
+    order = models.ForeignKey('Order', related_name='items',
                               on_delete=models.CASCADE)
     product = models.ForeignKey(Product,
                                 on_delete=models.CASCADE)
@@ -26,8 +32,8 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    user = models.ForeignKey(User,related_name='orders',on_delete=models.CASCADE)
-    product = models.ManyToManyField(Product,through=OrderItem)
+    user = models.ForeignKey(User, related_name='orders', on_delete=models.CASCADE)
+    product = models.ManyToManyField(Product, through=OrderItem)
     address = models.CharField(max_length=255)
     status = models.CharField(choices=STATUS_CHOICES, default='open', max_length=20)
     number = models.CharField(max_length=150)
@@ -50,3 +56,4 @@ def order_post_save(sender, instance: Order, *args, **kwargs):
         instance.total_sum,
 
     )
+

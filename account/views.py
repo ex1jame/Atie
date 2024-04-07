@@ -64,11 +64,3 @@ class UserViewSet(ListModelMixin, GenericViewSet):
         user.activation_code = ''
         user.save()
         return Response({'message': 'Аккаунт активирован.'}, status=200)
-from rest_framework import generics
-
-class MyView(generics.ListAPIView):
-    def get(self, request, *args, **kwargs):
-        response = {
-            'message': 'token works.'
-        }
-        return Response(response, status=200)
