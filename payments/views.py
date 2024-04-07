@@ -9,7 +9,7 @@ from decouple import config
 
 
 class StripeCheckoutSessionViewSet(viewsets.ViewSet):
-    stripe.api_key = config('stripe.api_key')
+    stripe._api_key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
     YOUR_DOMAIN = 'http://localhost:8000'
 
 
